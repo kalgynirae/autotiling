@@ -37,7 +37,7 @@ def switch_splitting(i3, e, debug):
 
             # Let's exclude floating containers, stacked layouts, tabbed layouts and full screen mode
             if not is_floating and not is_stacked and not is_tabbed and not is_full_screen:
-                new_layout = 'splitv' if con.rect.height > con.rect.width else 'splith'
+                new_layout = 'splitv' if con.rect.height > (con.rect.width - 24) else 'splith'
                 if new_layout != con.parent.layout:
                     result = i3.command(new_layout)
                     if result[0].success and debug:
