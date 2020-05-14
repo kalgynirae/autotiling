@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-# _*_ coding: utf-8 _*_
-
 """
 This script uses the i3ipc python module to switch the layout splith / splitv
 for the currently focused window, depending on its dimensions.
